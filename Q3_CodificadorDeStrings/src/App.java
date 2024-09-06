@@ -4,7 +4,6 @@ public class App {
 
         String aux = "Desafio Padrões de Projeto";
 
-        // Usando CodificadorSimplesStrategy
         cod.setStrategy(new CodificadorSimplesStrategy());
         System.out.println(aux);
         aux = cod.codifica(aux);
@@ -12,7 +11,6 @@ public class App {
         aux = cod.deCodifica(aux);
         System.out.println(aux);
 
-        // Usando CodificadorDeslocaStrategy
         cod.setStrategy(new CodificadorDeslocaStrategy());
         aux = cod.codifica(aux);
         System.out.println(aux);
