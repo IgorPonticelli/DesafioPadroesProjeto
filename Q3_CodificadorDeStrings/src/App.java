@@ -4,14 +4,17 @@ public class App {
 
         String aux = "Desafio Padrões de Projeto";
 
+        cod.setStrategy(new CodificadorSimplesStrategy());
         System.out.println(aux);
-        aux = cod.codifica(Codificador.Tipo.SIMPLES, aux);
+        aux = cod.codifica(aux);
         System.out.println(aux);
-        aux = cod.deCodifica(Codificador.Tipo.SIMPLES, aux);
+        aux = cod.deCodifica(aux);
         System.out.println(aux);
-        aux = cod.codifica(Codificador.Tipo.DESLOCA, aux);
+
+        cod.setStrategy(new CodificadorDeslocaStrategy());
+        aux = cod.codifica(aux);
         System.out.println(aux);
-        aux = cod.deCodifica(Codificador.Tipo.DESLOCA, aux);
+        aux = cod.deCodifica(aux);
         System.out.println(aux);
     }
 }
